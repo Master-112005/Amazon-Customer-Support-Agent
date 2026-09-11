@@ -1,0 +1,24 @@
+{
+  "name": "reply-agent",
+  "version": "1.0.0",
+  "description": "AmazonHelp Customer Support Dataset Preparation",
+  "main": "src/data/prepare.js",
+  "scripts": {
+    "prepare-data": "node src/data/prepare.js",
+    "test": "node tests/reconstruct.test.js && node tests/intent.test.js && node tests/golden.test.js",
+    "discover-intents": "node src/intent/discover.js && node src/intent/validate.js",
+    "create-golden": "node src/golden/create_golden_queue.js",
+    "annotate-golden": "node src/golden/annotate.js",
+    "validate-golden": "node src/golden/validate_golden.js",
+    "evaluate": "node src/evaluation/index.js",
+    "evaluate:intent": "node src/evaluation/intent_eval.js",
+    "evaluate:retrieval": "node src/evaluation/retrieval_eval.js",
+    "evaluate:agent": "node src/evaluation/agent_eval.js",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "csv-parse": "^5.5.5",
+    "express": "^5.2.1"
+  }
+}
