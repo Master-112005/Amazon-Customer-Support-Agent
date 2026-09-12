@@ -2,7 +2,7 @@
 
 A lightweight, professional-grade AI support system designed to classify customer intents, ground replies in historical brand behavior, and intelligently decide between auto-handling and human escalation.
 
-## 🚀 Quick Start 
+##  Quick Start 
 
 ### 1. Prerequisites
 - **Node.js** (v16+)
@@ -33,7 +33,7 @@ node src/golden/evaluate.js
 
 ---
 
-## 🛠️ System Architecture
+##  System Architecture
 
 The agent follows a deterministic pipeline to ensure reliability and prevent LLM hallucinations:
 
@@ -46,7 +46,7 @@ The agent follows a deterministic pipeline to ensure reliability and prevent LLM
     - `ESCALATE`: Low confidence/High risk $\rightarrow$ Route to human.
 5.  **Llama-3.2-1B Generator**: A local 1B parameter model that synthesizes a polite reply grounded **strictly** in the retrieved historical evidence.
 
-## 📊 Performance Summary
+##  Performance Summary
 - **Intent Accuracy**: ~48% on noisy Twitter data.
 - **Key Strength**: High reliability in high-risk categories (Refunds, Account Issues, Damaged Items).
 - **Grounding**: Zero hallucination rate due to "evidence-only" generation constraints.
